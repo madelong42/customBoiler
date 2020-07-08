@@ -1,10 +1,9 @@
-const path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
   entry: [
-    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true',
     './client/index.js'
   ],
   output: {
@@ -16,8 +15,21 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
   ],
+  resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom',
+    },
+    extensions: ['*', '.js', '.jsx']
+  },
   module: {
     rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
       {
         test: /\.css$/,
         use: [
@@ -43,6 +55,9 @@ module.exports = {
           'file-loader',
         ],
       },
+      { test: /\.txt$/,
+        use: 'raw-loader'
+      }
     ],
   }
 };

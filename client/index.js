@@ -1,12 +1,17 @@
+import 'core-js';
+import React from "react";
+import { render } from "react-dom";
+
+import 'normalize.css'
 import './index.css';
+import App from "./App";
 
-function component() {
-  const element = document.createElement('div');
+const renderElement = document.createElement('div');
+document.body.appendChild(renderElement);
 
-  element.innerHTML = 'hi';
-  element.classList.add('test');
-
-  return element;
-}
-
-document.body.appendChild(component());
+render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  renderElement
+);
