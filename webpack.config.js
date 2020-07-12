@@ -1,4 +1,3 @@
-/* eslint-disable prefer-named-capture-group */
 /* eslint-disable sort-keys */
 const webpack = require('webpack');
 
@@ -6,6 +5,7 @@ module.exports = {
   devtool: 'eval-source-map',
   entry: [
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true',
+    'react-hot-loader/patch',
     './client/index.js'
   ],
   mode: 'development',
