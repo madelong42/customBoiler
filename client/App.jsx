@@ -41,6 +41,6 @@ function App() {
       </div>
     </>
   );
-};
+}
 
 export default hot(App);
