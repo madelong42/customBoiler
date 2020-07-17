@@ -4,12 +4,12 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import './app.css';
 
-const App = ()=> {
+function App() {
+  const dispatch = useDispatch();
   const { count, name } = useSelector((state)=> ({
     ...state.countReducer,
     ...state.nameReducer
   }));
-  const dispatch = useDispatch();
 
   const add = ()=> {
     dispatch({
