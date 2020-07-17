@@ -32,13 +32,11 @@ const App = ()=> {
 
   return (
     <>
-      <div className='test'>
-        <h1>{`Counter: ${count}`}</h1>
+      <div id='test'>
+        <h1 className='count'>{`Counter: ${count}`}</h1>
         <button onClick={add}>+</button>
         <button onClick={subtract}>-</button>
-      </div>
-      <h1>{`Name: ${name}`}</h1>
-      <div>
+        <h1 className='name'>{`Name: ${name}`}</h1>
         <input placeholder='Input your name' onChange={updateName}/>
       </div>
     </>
