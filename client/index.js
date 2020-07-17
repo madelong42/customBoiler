@@ -1,25 +1,22 @@
 import 'core-js';
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import reducer from './redux/reducer';
+import store from './redux/reducers';
 
 import 'normalize.css';
 import './index.css';
 
-import Main from './Main';
-
-const vehicle = createStore(reducer);
+import App from './App';
 
 const rootElement = document.createElement('div');
 rootElement.className = 'root';
 document.body.appendChild(rootElement);
-console.log(vehicle);
+
 render(
   <React.StrictMode>
-    <Provider store={vehicle}>
-      <Main />
+    <Provider store={store}>
+      <App />
     </Provider>
   </React.StrictMode>,
   rootElement

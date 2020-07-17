@@ -23,7 +23,7 @@ app.use(webpackHotMiddleware(webpackCompiler, {
 
 app.use(express.static(`${__dirname}/../public/`));
 
-app.listen(3001, () => {
+app.listen(port, () => {
   console.log(`Example app listening on port ${port}.\n`);
   open(`http://localhost:${port}`);
 });
