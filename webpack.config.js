@@ -11,6 +11,7 @@ module.exports = {
   mode: 'development',
   module: {
     rules: [
+      // es-lint loader prevents compiling
       // {
       //   enforce: 'pre',
       //   test: /\.(js|jsx)$/,
