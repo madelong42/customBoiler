@@ -4,7 +4,9 @@
 
 In the project directory, you can run:
 
-### `npm start`
+### `yarn start`
+
+If your're not using yarn you are destroying your drive
 
 Runs the app in the development mode.<br /> Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 

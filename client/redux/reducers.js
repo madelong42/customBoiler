@@ -7,12 +7,12 @@ const initCountState = {
 function countReducer(state = initCountState, action) {
   switch (action.type) {
   case 'ADD':
-    return {
+    return{
       ...state,
       count: state.count + 1
     };
   case 'SUBTRACT':
-    return {
+    return{
       ...state,
       count: state.count - 1
     };
@@ -28,7 +28,7 @@ const initNameState = {
 function nameReducer(state = initNameState, action) {
   switch (action.type) {
   case 'UPDATE_NAME':
-    return {
+    return{
       ...state,
       name: action.payload
     };

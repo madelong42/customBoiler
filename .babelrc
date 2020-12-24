@@ -1,3 +1,5 @@
+// present-env is only needed if targeting shitty browsers, if not using shitty browser you can ship new code and bypass shitty browser conversions
+
 {
   "presets": ["@babel/preset-env", "@babel/preset-react"],
   "plugins": ["react-hot-loader/babel"]
