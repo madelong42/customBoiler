@@ -4,9 +4,9 @@
   "description": "A Custom Boilerplate. Featuring HMR, React, Redux, Express",
   "homepage": "https://github.com/mdelong42",
   "scripts": {
-    "build": "SET NODE_ENV=prod & webpack",
-    "server": "SET NODE_ENV=dev & node ./server/expressServer.js",
-    "prodServer": "SET NODE_ENV=prod & node ./server/expressServer.js",
+    "build": "cross-env NODE_ENV=prod & webpack",
+    "server": "cross-env NODE_ENV=dev node ./server/expressServer.js",
+    "prodServer": "cross-env NODE_ENV=prod & node ./server/expressServer.js",
     "test": "echo \"^^^^^Built for Windows^^^^^\" && exit 1"
   },
   "keywords": [],
@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "core-js": "3.8.1",
+    "cross-env": "^7.0.3",
     "normalize.css": "8.0.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
